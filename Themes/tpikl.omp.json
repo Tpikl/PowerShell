@@ -1,0 +1,168 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "#2f2f2f",
+          "foreground": "blue",
+          "properties": {
+            "alpine": "",
+            "arch": "",
+            "centos": "",
+            "debian": "",
+            "elementary": "",
+            "fedora": "",
+            "gentoo": "",
+            "linux": "",
+            "macos": "",
+            "manjaro": "",
+            "mint": "",
+            "opensuse": "",
+            "raspbian": "",
+            "ubuntu": "",
+            "windows": "",
+            "wsl": "",
+            "wsl_separator": " on "
+          },
+          "style": "diamond",
+          "type": "os"
+        },
+        {
+          "background": "#2f2f2f",
+          "foreground": "#fafafa",
+          "properties": {
+            "display_default": false,
+            "postfix": "<#7a7a7a> </>",
+            "user_color": "blue",
+            "display_host": false
+          },
+          "style": "diamond",
+          "type": "session"
+        },
+        {
+          "background": "#2f2f2f",
+          "foreground": "#ffff66",
+          "properties": {
+            "postfix": "<#7a7a7a> </>",
+            "root_icon": ""
+          },
+          "style": "diamond",
+          "type": "root"
+        },
+        {
+          "background": "#2f2f2f",
+          "foreground": "green",
+          "properties": {
+            "enable_hyperlink": true,
+            "folder_icon": "<green> </>",
+            "folder_separator_icon": "<darkGray> </>",
+            "prefix": "<green>  </>",
+            "style": "agnoster_short"
+          },
+          "style": "diamond",
+          "type": "path"
+        },
+        {
+          "background": "#2f2f2f",
+          "foreground": "#fafafa",
+          "properties": {
+            "postfix": "",
+            "prefix": "",
+            "text": ""
+          },
+          "style": "diamond",
+          "trailing_diamond": "",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "background": "#2f2f2f",
+          "foreground": "#fafafa",
+          "leading_diamond": "",
+          "properties": {
+            "postfix": "",
+            "prefix": "",
+            "text": ""
+          },
+          "style": "diamond",
+          "type": "text"
+        },
+        {
+          "background": "#2f2f2f",
+          "foreground": "#ffeb3b",
+          "properties": {
+            "ahead_color": "#2EC4B6",
+            "behind_color": "#8A4FFF",
+            "color_background": false,
+            "display_stash_count": true,
+            "display_status": true,
+            "display_upstream_icon": true,
+            "local_changes_color": "#ffeb3b",
+            "postfix": "<#7a7a7a> </>",
+            "staging_color": "#2FDA4E",
+            "status_colors_enabled": true,
+            "working_color": "#E84855"
+          },
+          "style": "diamond",
+          "type": "git"
+        },
+        {
+          "background": "#2f2f2f",
+          "foreground": "#fafafa",
+          "properties": {
+            "postfix": "<#007ACC>  </>",
+            "time_format": "15:04:05"
+          },
+          "style": "diamond",
+          "type": "time"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#7a7a7a",
+          "properties": {
+            "postfix": "",
+            "prefix": "",
+            "text": " ➜"
+          },
+          "style": "plain",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "foreground": "#FFCE5C",
+          "properties": {
+            "prefix": "❮",
+            "postfix": "<#fafafa>  </>",
+            "style": "roundrock",
+            "threshold": 500
+          },
+          "style": "plain",
+          "type": "executiontime"
+        }
+      ],
+      "type": "rprompt"
+    }
+  ],
+  "console_title": true,
+  "console_title_style": "template",
+  "console_title_template": "{{if .Root}}root :: {{end}}{{.Shell}} :: {{.Folder}}",
+  "final_space": true
+}
