@@ -1,61 +1,44 @@
 New-Module git-shortcuts {
 
 # --- Functions ----------------
-# Git Shortcuts
-    function gFe { git fetch --tags --prune }
-    function gBr { git branch -a }
-    function gSt { git status }
-    function gLo { git log }
-    function gRe { git restore * }
-    function gCh {
+    function g.Fetch { git fetch --tags --prune }
+    function g.Branches { git branch -a }
+    function g.Status { git status }
+    function g.Log { git log }
+    function g.Restore { git restore * }
+    function g.Checkout {
         [CmdletBinding()]
         param (
             [string]$branchName
         )
         git checkout $branchName
     }
-    function gPu {
+    function g.Pull {
         [CmdletBinding()]
         param (
             [string]$branchName
         )
         git pull origin $branchName
     }
-    function gNB {
+    function g.NewBranch {
         [CmdletBinding()]
         param (
             [string]$branchName
         )
         git checkout -b $branchName
     }
-
-# Command help
-    function gitShortcuts {
-        echo "-- Git Commands: ---"
-        echo "gFe - 'git fetch --tags --prune'"
-        echo "gBr - 'git branch -a'"
-        echo "gSt - 'git status'"
-        echo "gLo - 'git log'"
-        echo "gRe - 'git restore *'"
-        echo "gCh - 'git checkout [branchName]'"
-        echo "gPu - 'git pull origin [branchName]'"
-        echo "gNB - 'git checkout -b [branchName]'"
-        echo ""
-    }
 # --- Functions ----------------
 
 
 # Exports ----------------------
-    Export-ModuleMember gFe
-    Export-ModuleMember gBr
-    Export-ModuleMember gSt
-    Export-ModuleMember gLo
-    Export-ModuleMember gRe
-    Export-ModuleMember gCh
-    Export-ModuleMember gPu
-    Export-ModuleMember gNB
-
-    Export-ModuleMember gitShortcuts
+    Export-ModuleMember g.Fetch
+    Export-ModuleMember g.Branches
+    Export-ModuleMember g.Status
+    Export-ModuleMember g.Log
+    Export-ModuleMember g.Restore
+    Export-ModuleMember g.Checkout
+    Export-ModuleMember g.Pull
+    Export-ModuleMember g.NewBranch
 # Exports ----------------------
 
 } | Import-Module
