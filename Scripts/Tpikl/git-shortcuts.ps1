@@ -30,7 +30,7 @@ New-Module git-shortcuts {
 # --- Functions ----------------
 
 
-# Exports ----------------------
+# --- Exports ------------------
     Export-ModuleMember g.Fetch
     Export-ModuleMember g.Branches
     Export-ModuleMember g.Status
@@ -39,6 +39,6 @@ New-Module git-shortcuts {
     Export-ModuleMember g.Checkout
     Export-ModuleMember g.Pull
     Export-ModuleMember g.NewBranch
-# Exports ----------------------
+# --- Exports ------------------
 
 } | Import-Module
